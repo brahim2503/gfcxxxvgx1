@@ -12,7 +12,6 @@ export default function BottomNav() {
     { to: '/appointments', icon: <Calendar className="w-6 h-6" />, label: t('appointments') },
     { to: '/ai', icon: <Bot className="w-6 h-6" />, label: t('aiAssistant') },
     { to: '/profile', icon: <User className="w-6 h-6" />, label: t('profile') },
-    { to: '/doctor', icon: <Stethoscope className="w-6 h-6" />, label: dir === 'rtl' ? 'طبيب' : 'Doctor' },
   ];
 
   return (
