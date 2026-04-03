@@ -1,8 +1,9 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { User, Settings, Bell, Shield, CreditCard, LogOut, ChevronRight, Heart } from 'lucide-react';
+import { User, Settings, Bell, Shield, CreditCard, LogOut, ChevronRight, Heart, Stethoscope } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { cn } from '../lib/utils';
+import { Link } from 'react-router-dom';
 
 export default function Profile() {
   const { t, dir } = useLanguage();
@@ -44,6 +45,9 @@ export default function Profile() {
         <MenuItem icon={<CreditCard className="w-5 h-5" />} label={dir === 'rtl' ? 'طرق الدفع' : 'Payment Methods'} />
         <MenuItem icon={<Shield className="w-5 h-5" />} label={dir === 'rtl' ? 'الأمان والخصوصية' : 'Security & Privacy'} />
         <MenuItem icon={<Heart className="w-5 h-5" />} label={dir === 'rtl' ? 'المفضلة' : 'Favorites'} />
+        <Link to="/doctor">
+          <MenuItem icon={<Stethoscope className="w-5 h-5" />} label={dir === 'rtl' ? 'لوحة تحكم الطبيب' : 'Doctor Dashboard'} />
+        </Link>
       </div>
 
       <button className="w-full flex items-center justify-center gap-2 text-red-500 font-bold py-4 rounded-2xl border border-red-100 hover:bg-red-50 transition-colors">

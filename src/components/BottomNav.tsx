@@ -1,18 +1,18 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { LayoutDashboard, Calendar, Car, Bot, User } from 'lucide-react';
+import { LayoutDashboard, Calendar, Car, Bot, User, Stethoscope } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { cn } from '../lib/utils';
 
 export default function BottomNav() {
-  const { t } = useLanguage();
+  const { t, dir } = useLanguage();
 
   const navItems = [
     { to: '/', icon: <LayoutDashboard className="w-6 h-6" />, label: t('dashboard') },
     { to: '/appointments', icon: <Calendar className="w-6 h-6" />, label: t('appointments') },
     { to: '/ai', icon: <Bot className="w-6 h-6" />, label: t('aiAssistant') },
-    { to: '/transport', icon: <Car className="w-6 h-6" />, label: t('transport') },
     { to: '/profile', icon: <User className="w-6 h-6" />, label: t('profile') },
+    { to: '/doctor', icon: <Stethoscope className="w-6 h-6" />, label: dir === 'rtl' ? 'طبيب' : 'Doctor' },
   ];
 
   return (
