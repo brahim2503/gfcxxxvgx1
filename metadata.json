@@ -1,0 +1,9 @@
+{
+  "name": "Remix: MamaCare",
+  "description": "A comprehensive app for pregnant women: tracking, appointments, transport, and AI assistance.",
+  "requestFramePermissions": [
+    "geolocation",
+    "camera",
+    "microphone"
+  ]
+}
